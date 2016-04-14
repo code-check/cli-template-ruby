@@ -1,0 +1,7 @@
+build:
+  - bundle install
+files:
+  - .gitignore
+  - main.rb
+  - Gemfile
+command: ruby main.rb
