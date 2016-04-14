@@ -1,3 +1,5 @@
+build:
+  - bundle install
 files:
   - .gitignore
   - main.rb
