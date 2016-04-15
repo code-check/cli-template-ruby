@@ -3,5 +3,6 @@ build:
 files:
   - .gitignore
   - main.rb
+  - app/app.rb
   - Gemfile
 command: ruby main.rb
