@@ -1,13 +1,12 @@
 require 'thor'
+require './app/app'
 
 class CLI < Thor
   default_command :main
 
   desc "write description here", "write usage here"
   def main(*args)
-    args.each { |v|
-      puts v
-    }
+    App.main(args, options)
   end
 
   def method_missing(method, *args)
