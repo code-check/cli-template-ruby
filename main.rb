@@ -5,7 +5,9 @@ class CLI < Thor
 
   desc "write description here", "write usage here"
   def main(*args)
-    #puts "#{args[0]}"
+    args.each { |v|
+      puts v
+    }
   end
 
   def method_missing(method, *args)
