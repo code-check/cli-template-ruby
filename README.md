@@ -1,25 +1,31 @@
-# CLI template for Ruby
+# CLI Applications with Ruby
 
-This is template app for CLI test.  
-You can make console application by editing [app/app.rb](app/app.rb)
+Here's how to build your codecheck challenge solution as a CLI application.  
 
-It uses Thor. See detail in [Thor website](http://whatisthor.com/)
+## Requirements
 
-## How to get input parameters
-APP class has a static function `main`.
+- Ruby (For the version see our [docs](https://code-check.github.io/docs/en/reference_users/#serverside-language-and-tool-versions) .)
+- Thor. Do `gem install thor`. (For details, see their [official website](http://whatisthor.com/).)
+## Recieve Inputs
+
+In [app/app.rb](app/app.rb) is a class called `App`.
+Build your console application in `App`'s `self.main` method.  
 
 ``` ruby
-def self.main(args, options) 
-end
+class App
+  def self.main(args, options)
+    args.each { |arg|
+      # 以下の行を自分のコードと置換してね。
+      result = arg
 ```
 
-All parameters are passed as `args` array
+All `stdin` input arguments are passed into `args` as an array.  
 
-If you want to use option parameter, you can use Thor's option feature in [main.rb](main.rb)
+If you want to use optional arguments, use Thor's `option` feature in [main.rb](main.rb).
 
-## How to output result
-You can use `puts` method
+## Output Results
+Use the standard `puts` method to output results to `stdout`.
 
 ``` ruby
-  puts args[0]
+  puts result
 ```
