@@ -5,4 +5,5 @@ files:
   - main.rb
   - app/app.rb
   - Gemfile
+main: app/app.rb
 command: ruby main.rb
