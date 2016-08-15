@@ -6,6 +6,7 @@ Here's how to build your codecheck challenge solution as a CLI application.
 
 - Ruby (For the version see our [docs](https://code-check.github.io/docs/en/reference_users/#serverside-language-and-tool-versions) .)
 - Thor. Do `gem install thor`. (For details, see their [official website](http://whatisthor.com/).)
+
 ## Recieve Inputs
 
 In [app/app.rb](app/app.rb) is a class called `App`.
@@ -15,7 +16,7 @@ Build your console application in `App`'s `self.main` method.
 class App
   def self.main(args, options)
     args.each { |arg|
-      # 以下の行を自分のコードと置換してね。
+      # Replace below line with your code.
       result = arg
 ```
 

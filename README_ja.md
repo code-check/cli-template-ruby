@@ -16,6 +16,7 @@ codecheckチャレンジの解答をCLIアプリケーションとして作成�
 class App
   def self.main(args, options)
     args.each { |arg|
+      # 以下の行を自分のコードと置換してね。
       result = arg
 ```
 
