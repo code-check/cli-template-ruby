@@ -1,27 +1,32 @@
-# CLIアプリケーション作成用テンプレート(Ruby)
+# CLIアプリケーション作成方法 (Ruby)
 
-RubyでCLIアプリケーションを作成するためのテンプレートです。
+codecheckチャレンジの解答をCLIアプリケーションとして作成する方法を教えるよ。
 
-[app/app.rb](app/app.rb)を編集することでCLIアプリケーションを作成することができます。
+## 必須条件
 
-このテンプレートではCLI作成のユーティリティとして、Thorを使用していsます。  
-Thorについての詳細は[Thorウェブサイト](http://whatisthor.com/)をごらんください。
+- Ruby（詳しいバージョンについては[ドキュ](https://code-check.github.io/docs/en/reference_users/#serverside-language-and-tool-versions)を見てね。）
+- Thor。`gem install thor`って念じてね。  
+(ThorはCLI作成のユーティリティ。詳しくは[オフィシャルページ](http://whatisthor.com/)をチェック。)
 
-## コマンドライン引数の取得方法
-APPクラスでは`main`というstaticメソッドが定義されています。
+## 引数の取得
+[app/app.rb](app/app.rb)では`App`というクラスが定義されてる。  
+この関数の`main`を編集することでCLIアプリケーションが作成できるぞ。  
 
 ``` ruby
-def self.main(args, options) 
-end
+class App
+  def self.main(args, options)
+    args.each { |arg|
+      # 以下の行を自分のコードと置換してね。
+      result = arg
 ```
 
-パラメータは`args`に配列として渡されます。  
-オプション形式の引数を使用する場合はThorのoption機能を使用してください。([main.rb](main.rb))
+コマンドライン引数は`args`に配列として渡される。  
 
-## コマンド実行結果の標準出力への出力
-標準の`puts`メソッドを使用してください。
+オプション形式の引数を使用する場合は[main.rb](main.rb)内でThorの`option`でオプション引数を追加できるよ。
+
+## 結果の出力
+`stdout`への出力は標準の`puts`メソッドを使用してね。
 
 ``` ruby
   puts args[0]
 ```
-
