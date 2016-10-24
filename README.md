@@ -1,32 +1,34 @@
-# CLI Applications with Ruby
+# Command line application template for Ruby
 
-Here's how to build your codecheck challenge solution as a CLI application.  
+Implement CLI application by editing [main.rb](app/main.rb).  
+You may add new files to keep your code clean, if it is allowed in your challenge.
 
-## Requirements
+## How to get input parameters
 
-- Ruby (For the version see our [docs](https://code-check.github.io/docs/en/reference_users/#serverside-language-and-tool-versions) .)
-- Thor. Do `gem install thor`. (For details, see their [official website](http://whatisthor.com/).)
+In [main.rb](app/main.rb), there is a function called `main`, which gives command line arguments as `argv`.
 
-## Recieve Inputs
-
-In [app/app.rb](app/app.rb) is a class called `App`.
-Build your console application in `App`'s `self.main` method.  
-
-``` ruby
-class App
-  def self.main(args, options)
-    args.each { |arg|
-      # Replace below line with your code.
-      result = arg
+``` rb
+def main(argv)
+  # code to run
+end
 ```
 
-All `stdin` input arguments are passed into `args` as an array.  
+`argv` passed here is came from [index.rb](index.rb) which passes `ARGV` to `main` function.
 
-If you want to use optional arguments, use Thor's `option` feature in [main.rb](main.rb).
-
-## Output Results
+## How to output result
 Use the standard `puts` method to output results to `stdout`.
 
 ``` ruby
-  puts result
+puts "Hello World"
+```
+
+## Install External Libraries
+If you want to use external libraries, do the following:
+
+- Write the library name in [Gemfile](Gemfile)
+- Add the following line to `build` section of [codecheck.yml](codecheck.yml):
+
+``` yaml
+build:
+  - bundle install
 ```

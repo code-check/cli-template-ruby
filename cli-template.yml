@@ -2,8 +2,8 @@ build:
   - bundle install
 files:
   - .gitignore
-  - main.rb
-  - app/app.rb
   - Gemfile
-main: app/app.rb
-command: ruby main.rb
+  - index.rb
+  - app/main.rb
+main: app/main.rb
+command: ruby index.rb
