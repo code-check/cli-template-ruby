@@ -26,9 +26,3 @@ puts "Hello World"
 If you want to use external libraries, do the following:
 
 - Write the library name in [Gemfile](Gemfile)
-- Add the following line to `build` section of [codecheck.yml](codecheck.yml):
-
-``` yaml
-build:
-  - bundle install
-```

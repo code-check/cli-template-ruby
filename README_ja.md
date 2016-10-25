@@ -25,9 +25,3 @@ puts "Hello World"
 外部ライブラリを使用する場合は以下の手順で実施してください。
 
 - [Gemfile](Gemfile)にライブラリ名を記述
-- [codecheck.yml](codecheck.yml)に以下の内容を追加：
-
-``` yaml
-build:
-  - bundle install
-```
