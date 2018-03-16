@@ -1,9 +1,14 @@
 build:
   - bundle install
 files:
-  - .gitignore
   - Gemfile
-  - index.rb
-  - app/main.rb
-main: app/main.rb
-command: ruby index.rb
+  - main.rb
+main: main.rb
+command: ruby main.rb
+envConf:
+  imageName: "givery/track-ruby-2.5"
+  cacheDirs: 
+    - "/usr/local/bundle"
+    - "/root/.gem/ruby/2.5.0"
+    - "/usr/local/lib/ruby/gems/2.5.0"
+
